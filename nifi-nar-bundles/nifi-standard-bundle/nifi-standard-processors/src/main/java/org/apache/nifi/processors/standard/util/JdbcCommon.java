@@ -359,6 +359,10 @@ public class JdbcCommon {
                             } else {
                                 rec.put(i - 1, value);
                             }
+                        } else if(javaSqlType == FLOAT) {
+                            rec.put(i - 1, ((Number) value).floatValue());
+                        } else if(javaSqlType == DOUBLE) {
+                            rec.put(i - 1, ((Number) value).doubleValue());
                         } else {
                             rec.put(i - 1, value);
                         }
